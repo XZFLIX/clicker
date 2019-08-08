@@ -1,0 +1,51 @@
+a{
+  color: red;
+  font-family: 'Pacifico', cursive;
+  font-size: 40px;
+  background: #21EBBE;
+  border-radius:15px;
+  transition: all 1.5s;
+  box-shadow: 3px 8px 4px 2px #EB9745;
+  cursor:crosshair;
+}
+a:hover{
+  background: #612C66
+}
+
+p{
+  color:#FFC575;
+font-family: 'Liu Jian Mao Cao', cursive;
+font-size:60px;
+background-color:rgba(0, 0, 0, 0.5);
+}
+
+
+h1{
+  animation:bounceIn 2s;
+color: #52FF7A;
+  font-family: 'Indie Flower', cursive;
+font-size: 80px
+
+}
+body{
+  background-image: url("backround pic.jpg");
+text-align: center;
+cursor:help;
+}
+img{
+  height:300px
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
