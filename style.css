@@ -25,27 +25,4 @@ h1{
 color: #52FF7A;
   font-family: 'Indie Flower', cursive;
 font-size: 80px
-
-}
-body{
-  background-image: url("backround pic.jpg");
-text-align: center;
-cursor:help;
-}
-img{
-  height:300px
-}
-
-@keyframes bounceIn {
-  0% {
-    transform: scale(0.1);
-    opacity: 0;
-  }
-  60% {
-    transform: scale(1.2);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1);
-  }
-}
+{
