@@ -126,8 +126,13 @@
         alert("is this all you do in your free time?")
         document.getElementById('award').innerHTML ="godlike clicker";
         document.getElementById('picture').src ="1000000 click pic.jpeg";
-
-
+        }
+        else if(points ==1000000){
+          autoclickfrequency = 2;
+          setInterval(go_auto,autoclickfrequency);
+          alert("u should be king?")
+          document.getElementById('award').innerHTML ="king of all clickers";
+          document.getElementById('picture'). src ="2000000 click pic.jpeg";
         }
         }
 
@@ -147,8 +152,9 @@
           alert("you upgraded your click power");
           clickpower = clickpower*2;
           document.getElementById('clickpowertext').innerHTML="clickpower="+clickpower.toString();
-          clickupgradercost = clickupgradercost*5;
+          clickupgradercost = clickupgradercost*4;
           document.getElementById('upgradebutton').innerHTML="clickmultiplyer (cost:"+ clickupgradercost.toString()+ "clicks)";
+
         }else{
           alert("not enough clicks to purchase");
         }
