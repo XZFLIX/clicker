@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/core.js"></script>
+    <link href="style.css" rel = "stylesheet" type = "text/css">
+<link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
+    <title>clicker</title>
+  </head>
+  <body>
+  <a onclick="go()"href="#">click me</a><br>
+  <a onclick="autoclicker()"href="#">auto click on</a>
+  <a onclick="clickupgrader()"href="#" id="upgradebutton">click multiplyer (cost:150 clicks)</a>
+  <h1 id = "pointstext">amount of clicks= 0</h1>
+  <h2 id="clickpowertext">1</h2>
+  <p id = "award"></p>
+  <img id ="picture">
+<script type="text/javascript">
+  var autoclick = false;
+  var autoclickfrequency= 1000;
+  var points = 0;
+  var clickpower = 1;
+  var clickupgradercost = 150;
+
+
+    setInterval(go_auto,autoclickfrequency);
+
+    function go(){
+      for (var i=0; i <clickpower; i++){
+      points +=1;
+      awards();
+      }
+    }
+
+    function go_auto(){
+      if (autoclick==true){
+      points +=1;
+      awards();
+    }
+    }
+
+    function awards(){
+
+      document.getElementById('pointstext').innerHTML = "amount of clicks = " + points;
+      if(points == 10){
+        alert("congratulations you have reach ten clicks!");
+        document.getElementById('award').innerHTML = "newbie clicker";
+        document.getElementById('picture').src = "10th click picture.png"
+      }
+      else if(points == 50){
+        alert("wow!you reach 50 click!");
+        document.getElementById('award').innerHTML = "average clicker";
+        document.getElementById('picture').src = "click 50 pic.jpg"
+      }
+        else if(points == 200)   {
+          alert("this is so cool you reached 200 clicks!");
+          document.getElementById('award').innerHTML = "advanced clicker";
+          document.getElementById('picture').src ="click 200 pic.jpg";
+        }
+        else if(points == 500){
+          alert("you fingers are sooooo fast! you reached 500 clicks");
+          document.getElementById('award').innerHTML = "pro clicker";
+          document.getElementById('picture').src ="click 500 pic.jpg";
+        }
+        else if(points ==1000){
+          autoclickfrequency = 500;
+          setInterval(go_auto,autoclickfrequency);
+          alert("how are you doing this!you reach 1000 clicks!");
+          document.getElementById('award').innerHTML = "veteran clicker";
+          document.getElementById('picture').src ="1000 click pic.jpg";
+        }
+        else if(points ==2000){
+          autoclickfrequency = 400;
+          setInterval(go_auto,autoclickfrequency);
+          alert("ok now, take a dang break you are at 2000 clicks");
+          document.getElementById('award').innerHTML = "olympic level clicker";
+          document.getElementById('picture').src ="2000 click pic.jpeg";
+        }
+        else if(points ==5000){
+          autoclickfrequency = 250;
+          setInterval(go_auto,autoclickfrequency);
+          alert("im so blown away you have made it to 5000 clicks this is incredible");
+          document.getElementById('award').innerHTML = "unreal clicker";
+          document.getElementById('picture').src ="5000 click pic.jpeg";
+        }
+          else if(points ==10000){
+            autoclickfrequency = 150;
+            setInterval(go_auto,autoclickfrequency);
+            alert("go outside you've reach 10000 clicks");
+            document.getElementById('award').innerHTML = "master clicker";
+            document.getElementById('picture').src ="10000 click pic.jpg";
+          }
+            else if(points ==20000){
+              autoclickfrequency = 100;
+              setInterval(go_auto,autoclickfrequency);
+              alert("you're done get off your computer you are at 20000 clicks");
+              document.getElementById('award').innerHTML = "presidential clicker";
+              document.getElementById('picture').src ="20000 click pic.jpg";
+            }
+            else if(points ==50000){
+              autoclickfrequency = 80;
+              setInterval(go_auto,autoclickfrequency),
+              alert("you've gone too far just log off you reached 50000 clicks");
+              document.getElementById('award').innerHTML = "legendary clicker"
+              document.getElementById('picture'). src ="50000 click pic.jpg"
+            }
+      else if(points ==100000){
+        autoclickfrequency = 30;
+        setInterval(go_auto,autoclickfrequency);
+        alert("you need too stop you're at 100000")
+        document.getElementById('award').innerHTML = "unexplainable clicker"
+        document.getElementById('picture'). src ="100000 click pic.jpeg"
+      }
+      else if(points ==500000){
+      autoclickfrequency = 15;
+      setInterval(go_auto,autoclickfrequency);
+      alert("im not even going to try you're just to good"),
+      document.getElementById('award').innerHTML ="flashy fingers";
+      document.getElementById('picture'). src ="500000 click pic.jpg";
+    }
+      else if(points ==1000000){
+        autoclickfrequency = 8;
+        setInterval(go_auto,autoclickfrequency);
+        alert("is this all you do in your free time?")
+        document.getElementById('award').innerHTML ="godlike clicker";
+        document.getElementById('picture').src ="1000000 click pic.jpeg";
+
+
+        }
+        }
+
+    function autoclicker(){
+      if (autoclick==false){
+       autoclick = true;
+      }else{
+        autoclick=false;
+      }
+    }
+
+    function clickupgrader(){
+        if (points >= clickupgradercost){
+          points=points-clickupgradercost ;
+          document.getElementById('pointstext').innerHTML = "amount of clicks = " + points;
+
+          alert("you upgraded your click power");
+          clickpower = clickpower*2;
+          document.getElementById('clickpowertext').innerHTML="clickpower="+clickpower.toString();
+          clickupgradercost = clickupgradercost*5;
+          document.getElementById('upgradebutton').innerHTML="clickmultiplyer (cost:"+ clickupgradercost.toString()+ "clicks)";
+        }else{
+          alert("not enough clicks to purchase");
+        }
+
+
+    }
+
+
+
+</script>
+
+  </body>
+</html
