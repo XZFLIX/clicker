@@ -21,14 +21,14 @@ a{
 
 
 	h1{
-	  animation:bounceIn 2s;
-	color: #52FF7A;
+	  animation:bounceIn 3s;
+	color: #5937DF;
 	  font-family: 'Indie Flower', cursive;
 	font-size: 80px
 
 	}
 	body{
-	  background-image: url("backround pic.jpg");
+	  background-image: url("new backroun 3.png");
 	text-align: center;
 	cursor:help;
 	}
