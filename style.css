@@ -28,12 +28,18 @@ a{
 
 	}
 	body{
-	  background-image: url("new backroun 3.png");
+	  background-image: url("yeet.jpg");
 	text-align: center;
 	cursor:help;
 	}
 	img{
 	  height:300px
+	}
+  h2{
+		animation:bounceIn 2s;
+		color: #EB1417;
+		font-family: 'Indie Flower', cursive;
+		font-size:30px
 	}
 
 	@keyframes bounceIn {
