@@ -10,11 +10,11 @@
     <title>clicker</title>
   </head>
   <body>
-  <a onclick="go()"href="#">click me</a><br>
+  <a onclick="go()"href="#">click me </a><br>
   <a onclick="autoclicker()"href="#">auto click on</a>
   <a onclick="clickupgrader()"href="#" id="upgradebutton">click multiplyer (cost:150 clicks)</a>
-  <h1 id = "pointstext">amount of clicks= 0</h1>
-  <h2 id="clickpowertext">1</h2>
+  <h1 id = "pointstext">power= 0</h1>
+  <h2 id="clickpowertext">clickpower=1</h2>
   <p id = "award"></p>
   <img id ="picture">
 <script type="text/javascript">
@@ -159,8 +159,15 @@ else if(points ==5000000000){
   autoclickfrequancy =0.000001
   setInterval(go_auto,autoclickfrequency);
   alert("...........")
-    document.getElementById('award').innerHTML ="clicker";
+    document.getElementById('award').innerHTML ="unstopable clicker";
   document.getElementById('picture'). src ="500000000 click pic.jpg";
+}
+else if(points ==10000000000){
+  autoclickfrequancy =0.00000001;
+  setInterval(go_auto,autoclickfreuency);
+  alert("I have no words")
+    document.getElementById('award').innerHTML ="universal clicker";
+    document.getElementById('picture'). src ="";
 }
         }
 
